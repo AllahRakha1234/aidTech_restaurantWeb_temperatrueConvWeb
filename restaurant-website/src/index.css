@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ /* **************************** CSS ***************************** */
+ .navbar{
+  height: 10vh;
+ }
+.navbarOptions{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+ }
+
+.navbarOptions li a{
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  padding: 3px 8px;
+}
+.navbarOptions li a:hover{
+  color: black;
+  background-color: rgb(255, 217, 0);
+  border-radius: 50px;
+  padding: 3px 8px;
+  font-weight: bold; 
+}
+
+.logoImg {
+  padding: 0px 10px;
+  animation: logoAnimationY 5s infinite; 
+  height: 45px;
+  width: 220px;
+}
+
+@keyframes logoAnimationY{
+  0%{
+    transform: rotateY(0deg);
+    border-radius: 5px;
+  }
+  25%{
+    background-color: rgb(238, 233, 233);
+    border-radius: 15px;
+  }
+  50%{
+    background-color: rgb(10, 210, 224);
+    border-radius: 50px;
+  }
+  75%{
+    background-color: rgb(1, 241, 161);
+    border-radius: 15px;
+  }
+  100%{
+    transform: rotateY(360deg);
+    border-radius: 5px;
+  }
+}
+
+
+/* ***** HOME PAGE ****** */
+
+
+.homePage {
+  height: 83vh; 
+  width: 100vw;   
+  /* background-image: url("https://c4.wallpaperflare.com/wallpaper/471/322/553/bread-meat-bbq-vegetables-wallpaper-preview.jpg"); */
+  background-image: url("./assets/images/bg.jpg");
+  background-size:cover;      
+  background-position: center;  
+  background-repeat: no-repeat; 
+}
+
+.homePageText{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+/* ***** ABOUT PAGE ****** */
+
+.locationBox{
+  display: flex;
+  justify-content: center;
+}
+
+.locationImg{
+  height: 50vh;
+  width: 70vw;
+  border: 2px solid black;
+  margin-bottom: 3vh;
+}
+
+/* ***** CONTACT PAGE ****** */
+.contactPage{
+  height: 80.4vh;
+}
+
+.followOption{
+  color:white;
+}
+
+.followOption:hover{
+  color: rgb(255, 217, 0);
+}
+
+.table,tr{
+border: 2px solid black;
+}
+
+.contactOption{
+  margin-left: 20px;
+}
+
+
+
+
+/* ***** MENU PAGE ****** */
+
+
+.itemImg{
+  height: 30vh;
+  width: 20vw;
+  object-fit: fill;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalImg{
+  height: 30vh;
+  width: 20vw;
+  object-fit: fill;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ****** FOOTER ****** */
+.footer{
+  height: 7vh;
+}
+
+
+/* ****** UTILITY CLASS ****** */
+@keyframes iconAnimationY{
+  0%{
+    transform: rotateY(0deg);
+  }
+  100%{
+    transform: rotateY(360deg);
+  }
+}
+
+.icon{
+  animation: iconAnimationY 3s infinite;
+}
+
+/* ------------------------ RESPONSIVE WEBSITE CSS -------------------------------- */
+
+@media only screen and (min-width: 630px) and (max-width: 999px) {
+
+  .contactPage{
+    height: 85vh;
+  }
+
+  .itemImg{
+    height: 30vh; 
+    width: 20vw;
+    object-fit: fill;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+@media only screen and (max-width:627px) {
+  .navbar{
+    height: 15vh;
+   }
+
+   .navbarOptionsBox{
+    margin: 0 auto;
+   }
+
+   .navbarOptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .navbarOptions li a{
+    margin: auto;
+  }
+
+   .logoImgBox{
+    margin: 0px auto;
+    margin-top: 2px;
+   }
+
+   .homePage {
+    height: 78vh; 
+    width: 100vw;  
+   }
+   .homePageText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 170px;
+    padding-left: 80px;
+   }
+
+   .aboutPageTitle{
+    font-size: 2rem;
+   }
+
+   .contactPage{
+    height: 90vh;
+  }
+   .contactPageTitle{
+    font-size: 2rem;
+   }
+   
+
+   .followOption{
+    size: 2;
+   }
+
+   .socialMediaOption{
+    width: 80vw;
+   }
+
+   .menuPageTitle{
+    font-size: 2rem;
+   }
+
+   .itemImg{
+    height: 30vh; 
+    width: 70vw;
+    object-fit: fill;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modalImg{
+    height: 60vh;
+    width: 80vw;
+  }
+
+  .footerText{
+    font-size: 1rem;
+  }
+}
+
